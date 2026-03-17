@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Deepak Saini — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Clash+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Bebas+Neue&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<div id="PROG"></div>
+<div id="CUR"></div>
+<div id="CUR2"></div>
+<canvas id="bgCanvas"></canvas>
+<div class="noise"></div>
+ 
+<div class="mob" id="mob">
+  <button class="mob-x" onclick="document.getElementById('mob').classList.remove('open')">✕</button>
+  <span class="mob-l" onclick="go('home')">Home</span>
+  <span class="mob-l" onclick="go('about')">About</span>
+  <span class="mob-l" onclick="go('skills')">Skills</span>
+  <span class="mob-l" onclick="go('projects')">Projects</span>
+  <span class="mob-l" onclick="go('experience')">Experience</span>
+  <span class="mob-l" onclick="go('contact')">Contact</span>
+</div>
+ 
+<div class="pw">
+ 
+<!-- NAV -->
+<nav class="nav">
+  <div class="nlogo" onclick="go('home')">DS<span class="nlogo-sep"></span>PORTFOLIO</div>
+  <ul class="nlinks" id="nlks">
+    <li class="nl act" data-s="home" onclick="go('home')">Home</li>
+    <li class="nl" data-s="about" onclick="go('about')">About</li>
+    <li class="nl" data-s="skills" onclick="go('skills')">Skills</li>
+    <li class="nl" data-s="projects" onclick="go('projects')">Projects</li>
+    <li class="nl" data-s="experience" onclick="go('experience')">Experience</li>
+    <li class="nl" data-s="contact" onclick="go('contact')">Contact</li>
+  </ul>
+  <button class="nham" onclick="document.getElementById('mob').classList.add('open')">☰</button>
+</nav>
+ 
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-l">
+    <div class="hero-eyebrow">
+      <div class="eyebrow-bar"></div>
+      <span class="eyebrow-txt">Portfolio 2025</span>
+      <span class="eyebrow-badge">Open to Internships</span>
+    </div>
+    <h1 class="hero-h1">
+      <span class="line-w">DEEPAK</span>
+      <span class="line-c">SAINI</span>
+    </h1>
+    <div class="hero-roles">
+      <span class="rpill">ML Engineer</span>
+      <span class="rpill">Gen AI</span>
+      <span class="rpill">Web Dev</span>
+    </div>
+    <p class="tw-wrap"><span class="tw-prefix">Building&nbsp;</span><span class="tw-text" id="tw"></span><span class="tw-caret"></span></p>
+    <div class="hero-btns">
+      <button class="btn-r" onclick="go('projects')">View Projects →</button>
+      <button class="btn-o" onclick="go('contact')">Contact Me</button>
+    </div>
+    <div class="hero-socials">
+      <a href="https://www.linkedin.com/in/deepak-saini-772704d" target="_blank" class="soc" title="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4V9h4v1.765C14.396 9.545 15.044 9 16 8zM2 9h4v12H2zm2-3a2 2 0 100-4 2 2 0 000 4z"/></svg></a>
+      <a href="https://github.com/Deepaksaini005" target="_blank" class="soc" title="GitHub"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85v2.74c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12c0-5.52-4.48-10-10-10z"/></svg></a>
+      <a href="https://www.instagram.com/katariya_deepak19/" target="_blank" class="soc" title="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="mailto:sainideepaksaini1234567890@gmail.com" class="soc" title="Email"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+    </div>
+  </div>
+  <div class="hero-r">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hstats">
+      <div class="hs"><div class="hs-n" id="cn1">0</div><div class="hs-l">Projects</div></div>
+      <div class="hs"><div class="hs-n">2nd</div><div class="hs-l">Year</div></div>
+      <div class="hs"><div class="hs-n" id="cn2">0</div><div class="hs-l">Skills</div></div>
+    </div>
+  </div>
+</section>
+ 
+<!-- STATS STRIP -->
+<div class="statsstrip">
+  <div class="statsstrip-inner">
+    <div class="ss-item rv"><div class="ss-n" id="ss1">0</div><div class="ss-l">Projects Built</div><div class="ss-sub">Real-world shipped</div></div>
+    <div class="ss-item rv d1"><div class="ss-n" id="ss2">0</div><div class="ss-l">Technologies</div><div class="ss-sub">Hands-on practice</div></div>
+    <div class="ss-item rv d2"><div class="ss-n">SIH</div><div class="ss-l">Hackathon</div><div class="ss-sub">2025 Participant</div></div>
+    <div class="ss-item rv d3"><div class="ss-n">2nd</div><div class="ss-l">Year B.Tech</div><div class="ss-sub">JECRC · 2024–28</div></div>
+  </div>
+</div>
+ 
+<!-- ABOUT -->
+<section id="about" class="sec altbg">
+  <div class="si">
+    <div class="s-kicker rv"><div class="s-kicker-line"></div><span class="s-kicker-txt">Who I Am</span></div>
+    <h2 class="s-h2 rv d1">ABOUT <span class="r">ME</span></h2>
+    <div class="agrid">
+      <div class="rvl d1">
+        <div class="acard">
+          <div class="acard-top">
+            <div class="av-hex">
+              <div class="av-hex-ring"></div>
+              <div class="av-hex-ring2"></div>
+              <span class="av-init">DS</span>
+            </div>
+            <div class="av-name">DEEPAK SAINI</div>
+            <div class="av-role">ML · GEN AI · WEB DEV</div>
+          </div>
+          <div class="acard-info">
+            <div class="ainfo-row"><div class="ainfo-ico">🎓</div><div><div class="ainfo-lbl">University</div><div class="ainfo-val">JECRC University, Jaipur</div></div></div>
+            <div class="ainfo-row"><div class="ainfo-ico">📅</div><div><div class="ainfo-lbl">Year</div><div class="ainfo-val">2nd Year B.Tech (2024–28)</div></div></div>
+            <div class="ainfo-row"><div class="ainfo-ico">📍</div><div><div class="ainfo-lbl">Location</div><div class="ainfo-val">Gopal Pura, Jaipur</div></div></div>
+            <div class="ainfo-row"><div class="ainfo-ico">📞</div><div><div class="ainfo-lbl">Phone</div><div class="ainfo-val">+91 7727049570</div></div></div>
+            <div class="ainfo-row"><div class="ainfo-ico">🏆</div><div><div class="ainfo-lbl">Status</div><div class="ainfo-val"><span class="avail">● Available</span> for Internships</div></div></div>
+            <div class="astats">
+              <div class="ast"><div class="ast-n">9+</div><div class="ast-l">Projects</div></div>
+              <div class="ast"><div class="ast-n">SIH</div><div class="ast-l">Hackathon</div></div>
+              <div class="ast"><div class="ast-n">12+</div><div class="ast-l">Skills</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="atext rvr d2">
+        <p>Hey! I'm <strong>Deepak Saini</strong>, a 2nd-year B.Tech Computer Science student at JECRC University, Jaipur with a burning passion for Machine Learning, Generative AI, and modern Web Development.</p>
+        <p>I've built real projects — from <strong>AI chat assistants</strong> and NLP-powered resume analyzers to e-commerce SQL analytics, credit risk EDA, Diwali sales analysis, and real-time face detection using OpenCV. I believe the best learning happens by building things that actually work.</p>
+        <p>In 2025, I participated in <strong>Smart India Hackathon (SIH)</strong>, collaborating with a cross-functional team to build solutions for real-world national challenges under intense time pressure. Each project sharpens my edge — every commit brings me closer to the engineer I'm becoming.</p>
+        <div class="atags">
+          <span class="atag">Python</span><span class="atag y">React</span><span class="atag t">SQL</span>
+          <span class="atag">ML / AI</span><span class="atag y">Gen AI</span><span class="atag t">Streamlit</span>
+          <span class="atag">Pandas</span><span class="atag y">Git</span><span class="atag t">Streamlit</span>
+          <span class="atag">Seaborn</span><span class="atag y">NumPy</span><span class="atag t">Tailwind</span>
+        </div>
+        <div class="socrow">
+          <a href="https://www.linkedin.com/in/deepak-saini-772704d" target="_blank" class="soclink"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4V9h4v1.765C14.396 9.545 15.044 9 16 8zM2 9h4v12H2zm2-3a2 2 0 100-4 2 2 0 000 4z"/></svg> LinkedIn</a>
+          <a href="https://github.com/Deepaksaini005" target="_blank" class="soclink"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85v2.74c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12c0-5.52-4.48-10-10-10z"/></svg> GitHub</a>
+          <a href="https://www.instagram.com/katariya_deepak19/" target="_blank" class="soclink"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- SKILLS -->
+<section id="skills" class="sec">
+  <div class="si">
+    <div class="s-kicker rv"><div class="s-kicker-line"></div><span class="s-kicker-txt">What I Know</span></div>
+    <h2 class="s-h2 rv d1">SKILLS & <span class="r">TECH</span></h2>
+    <p class="s-desc rv d2">A growing toolkit built through real projects, not just tutorials.</p>
+    <div class="sklayout">
+      <div class="skpanel rv d1">
+        <div class="skph"><div class="skph-ico">💻</div><div class="skph-info"><div class="skph-title">WEB DEVELOPMENT</div><div class="skph-count">3 skills</div></div></div>
+        <div class="skbar"><div class="skrow"><span class="sknm">HTML & CSS</span><div class="sk-level"><span class="sk-badge adv">Advanced</span><span class="skpc">78%</span></div></div><div class="sktrack"><div class="skfill" data-w="78"></div></div></div>
+        <div class="skbar"><div class="skrow"><span class="sknm">JavaScript</span><div class="sk-level"><span class="sk-badge int">Intermediate</span><span class="skpc">62%</span></div></div><div class="sktrack"><div class="skfill" data-w="62"></div></div></div>
+        <div class="skbar"><div class="skrow"><span class="sknm">Git & GitHub</span><div class="sk-level"><span class="sk-badge adv">Advanced</span><span class="skpc">72%</span></div></div><div class="sktrack"><div class="skfill" data-w="72"></div></div></div>
+      </div>
+      <div class="skpanel gold rv d2">
+        <div class="skph"><div class="skph-ico">📊</div><div class="skph-info"><div class="skph-title">DATA SCIENCE</div><div class="skph-count">4 skills</div></div></div>
+        <div class="skbar"><div class="skrow"><span class="sknm">Python</span><div class="sk-level"><span class="sk-badge adv">Advanced</span><span class="skpc">82%</span></div></div><div class="sktrack"><div class="skfill" data-w="82"></div></div></div>
+        <div class="skbar"><div class="skrow"><span class="sknm">Pandas & NumPy</span><div class="sk-level"><span class="sk-badge adv">Advanced</span><span class="skpc">78%</span></div></div><div class="sktrack"><div class="skfill" data-w="78"></div></div></div>
+        <div class="skbar"><div class="skrow"><span class="sknm">Matplotlib / Seaborn</span><div class="sk-level"><span class="sk-badge int">Intermediate</span><span class="skpc">74%</span></div></div><div class="sktrack"><div class="skfill" data-w="74"></div></div></div>
+        <div class="skbar"><div class="skrow"><span class="sknm">SQL + Excel</span><div class="sk-level"><span class="sk-badge int">Intermediate</span><span class="skpc">68%</span></div></div><div class="sktrack"><div class="skfill" data-w="68"></div></div></div>
+      </div>
+      <div class="skpanel teal rv d3">
+        <div class="skph"><div class="skph-ico">🤖</div><div class="skph-info"><div class="skph-title">AI & GENERATIVE AI</div><div class="skph-count">4 skills</div></div></div>
+        <div class="skbar"><div class="skrow"><span class="sknm">Prompt Engineering</span><div class="sk-level"><span class="sk-badge adv">Advanced</span><span class="skpc">84%</span></div></div><div class="sktrack"><div class="skfill" data-w="84"></div></div></div>
+        <div class="skbar"><div class="skrow"><span class="sknm">AI Tools & Workflows</span><div class="sk-level"><span class="sk-badge adv">Advanced</span><span class="skpc">78%</span></div></div><div class="sktrack"><div class="skfill" data-w="78"></div></div></div>
+        <div class="skbar"><div class="skrow"><span class="sknm">LLM APIs & Integration</span><div class="sk-level"><span class="sk-badge int">Intermediate</span><span class="skpc">65%</span></div></div><div class="sktrack"><div class="skfill" data-w="65"></div></div></div>
+        <div class="skbar"><div class="skrow"><span class="sknm">AI-Assisted Dev (Cursor)</span><div class="sk-level"><span class="sk-badge adv">Advanced</span><span class="skpc">80%</span></div></div><div class="sktrack"><div class="skfill" data-w="80"></div></div></div>
+      </div>
+      <div class="skpanel rv d4">
+        <div class="skph"><div class="skph-ico">⚡</div><div class="skph-info"><div class="skph-title">SOFT SKILLS</div><div class="skph-count">8 attributes</div></div></div>
+        <div class="softs">
+          <span class="soft">🤝 Teamwork</span><span class="soft">🧠 Problem Solving</span>
+          <span class="soft">⚡ Decision Making</span><span class="soft">🔍 Logical Reasoning</span>
+          <span class="soft">✨ Creative Thinking</span><span class="soft">📚 Curiosity to Learn</span>
+          <span class="soft">💬 Communication</span><span class="soft">🔄 Adaptability</span>
+        </div>
+      </div>
+    </div>
+    <!-- Tech icon marquee strip -->
+    <div class="tech-strip rv d3" style="margin-top:2rem">
+      <div class="ts-title">// Technologies I Work With</div>
+      <div style="overflow:hidden">
+        <div class="ts-track">
+          <div class="ts-item"><div class="ts-ico">🐍</div><div class="ts-nm">Python</div></div>
+          <div class="ts-item"><div class="ts-ico">📊</div><div class="ts-nm">Pandas</div></div>
+          <div class="ts-item"><div class="ts-ico">🔢</div><div class="ts-nm">NumPy</div></div>
+          <div class="ts-item"><div class="ts-ico">📈</div><div class="ts-nm">Matplotlib</div></div>
+          <div class="ts-item"><div class="ts-ico">🎨</div><div class="ts-nm">Seaborn</div></div>
+          <div class="ts-item"><div class="ts-ico">🗄️</div><div class="ts-nm">SQL</div></div>
+          <div class="ts-item"><div class="ts-ico">🌐</div><div class="ts-nm">HTML/CSS</div></div>
+          <div class="ts-item"><div class="ts-ico">⚡</div><div class="ts-nm">JavaScript</div></div>
+          <div class="ts-item"><div class="ts-ico">🤖</div><div class="ts-nm">LLM APIs</div></div>
+          <div class="ts-item"><div class="ts-ico">✍️</div><div class="ts-nm">Prompt Eng</div></div>
+          <div class="ts-item"><div class="ts-ico">⚙️</div><div class="ts-nm">Git</div></div>
+          <!-- duplicate for seamless loop -->
+          <div class="ts-item"><div class="ts-ico">🐍</div><div class="ts-nm">Python</div></div>
+          <div class="ts-item"><div class="ts-ico">📊</div><div class="ts-nm">Pandas</div></div>
+          <div class="ts-item"><div class="ts-ico">🔢</div><div class="ts-nm">NumPy</div></div>
+          <div class="ts-item"><div class="ts-ico">📈</div><div class="ts-nm">Matplotlib</div></div>
+          <div class="ts-item"><div class="ts-ico">🎨</div><div class="ts-nm">Seaborn</div></div>
+          <div class="ts-item"><div class="ts-ico">🗄️</div><div class="ts-nm">SQL</div></div>
+          <div class="ts-item"><div class="ts-ico">🌐</div><div class="ts-nm">HTML/CSS</div></div>
+          <div class="ts-item"><div class="ts-ico">⚡</div><div class="ts-nm">JavaScript</div></div>
+          <div class="ts-item"><div class="ts-ico">🤖</div><div class="ts-nm">LLM APIs</div></div>
+          <div class="ts-item"><div class="ts-ico">✍️</div><div class="ts-nm">Prompt Eng</div></div>
+          <div class="ts-item"><div class="ts-ico">⚙️</div><div class="ts-nm">Git</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- PROJECTS -->
+<section id="projects" class="sec altbg">
+  <div class="si">
+    <div class="p-toolbar">
+      <div>
+        <div class="s-kicker rv"><div class="s-kicker-line"></div><span class="s-kicker-txt">What I've Built</span></div>
+        <h2 class="s-h2 rv d1">MY <span class="r">PROJECTS</span></h2>
+      </div>
+      <div class="pfilt rv d2">
+        <button class="pfbtn sel" data-f="all" onclick="filterP(this)">All (9)</button>
+        <button class="pfbtn" data-f="ai" onclick="filterP(this)">AI</button>
+        <button class="pfbtn" data-f="web" onclick="filterP(this)">Web</button>
+        <button class="pfbtn" data-f="data" onclick="filterP(this)">Data</button>
+        <button class="pfbtn" data-f="cv" onclick="filterP(this)">Vision</button>
+      </div>
+    </div>
+    <div class="pgrid">
+      <div class="pcard rv d1" data-cat="ai"><div class="pcard-spotlight"></div>
+        <div class="pbody">
+          <div class="ptop"><span class="pem">🤖</span><span class="pbadge ai">Gen AI</span></div>
+          <div class="ptitle">AI Chat Assistant</div>
+          <div class="pdesc">Intelligent conversational AI assistant featuring real-time NLU and smart response generation, powered by modern generative AI APIs and LLMs.</div>
+          <div class="ptechs"><span class="ptech">Python</span><span class="ptech">Gen AI</span><span class="ptech">LLM API</span></div>
+        </div>
+        <div class="pfoot"><a href="https://github.com/Deepaksaini005/AI-Chat-Assistant" target="_blank" class="plink">AI-Chat-Assistant</a><a href="https://github.com/Deepaksaini005/AI-Chat-Assistant" target="_blank" class="pgh">↗</a></div>
+      </div>
+      <div class="pcard web-type rv d2" data-cat="web"><div class="pcard-spotlight"></div>
+        <div class="pbody">
+          <div class="ptop"><span class="pem">🛍️</span><span class="pbadge web">Web Dev</span></div>
+          <div class="ptitle">E-Commerce Cloth Store</div>
+          <div class="pdesc">Full-featured clothing e-commerce platform with product browsing, cart functionality, and a clean fully responsive UI built with modern technologies.</div>
+          <div class="ptechs"><span class="ptech">HTML/CSS</span><span class="ptech">JavaScript</span><span class="ptech">React</span></div>
+        </div>
+        <div class="pfoot"><a href="https://github.com/Deepaksaini005/E-Commerce_cloth_project" target="_blank" class="plink">E-Commerce_cloth_project</a><a href="https://github.com/Deepaksaini005/E-Commerce_cloth_project" target="_blank" class="pgh">↗</a></div>
+      </div>
+      <div class="pcard rv d3" data-cat="ai"><div class="pcard-spotlight"></div>
+        <div class="pbody">
+          <div class="ptop"><span class="pem">📄</span><span class="pbadge ai">AI / NLP</span></div>
+          <div class="ptitle">Resume Analyzer</div>
+          <div class="pdesc">AI-powered resume analysis using NLP — evaluates quality, extracts key info, and delivers actionable improvement suggestions instantly.</div>
+          <div class="ptechs"><span class="ptech">Python</span><span class="ptech">NLP</span><span class="ptech">Streamlit</span></div>
+        </div>
+        <div class="pfoot"><a href="https://github.com/Deepaksaini005/Reusme_-Analyzer" target="_blank" class="plink">Reusme_-Analyzer</a><a href="https://github.com/Deepaksaini005/Reusme_-Analyzer" target="_blank" class="pgh">↗</a></div>
+      </div>
+      <div class="pcard web-type rv d1" data-cat="web"><div class="pcard-spotlight"></div>
+        <div class="pbody">
+          <div class="ptop"><span class="pem">🏫</span><span class="pbadge web">Web Dev</span></div>
+          <div class="ptitle">College Complaint System</div>
+          <div class="pdesc">Responsive complaint portal built with HTML/JS + Cursor AI-assisted dev, connected to backend REST APIs built by team members.</div>
+          <div class="ptechs"><span class="ptech">HTML/CSS</span><span class="ptech">JavaScript</span><span class="ptech">API</span></div>
+        </div>
+        <div class="pfoot"><a href="https://github.com/Deepaksaini005/college---complaint--Related" target="_blank" class="plink">college-complaint-Related</a><a href="https://github.com/Deepaksaini005/college---complaint--Related" target="_blank" class="pgh">↗</a></div>
+      </div>
+      <div class="pcard data-type rv d2" data-cat="data"><div class="pcard-spotlight"></div>
+        <div class="pbody">
+          <div class="ptop"><span class="pem">🗄️</span><span class="pbadge data">SQL · Data</span></div>
+          <div class="ptitle">SQL E-Commerce Sales Analysis</div>
+          <div class="pdesc">Deep SQL-based analysis of e-commerce sales — revenue trends, top products, customer segmentation and actionable business performance KPIs.</div>
+          <div class="ptechs"><span class="ptech">SQL</span><span class="ptech">Python</span><span class="ptech">Pandas</span><span class="ptech">EDA</span></div>
+        </div>
+        <div class="pfoot"><a href="https://github.com/Deepaksaini005/sql-ecommerce-sales-analysis" target="_blank" class="plink">sql-ecommerce-sales-analysis</a><a href="https://github.com/Deepaksaini005/sql-ecommerce-sales-analysis" target="_blank" class="pgh">↗</a></div>
+      </div>
+      <div class="pcard data-type rv d3" data-cat="data"><div class="pcard-spotlight"></div>
+        <div class="pbody">
+          <div class="ptop"><span class="pem">💳</span><span class="pbadge data">EDA · Finance</span></div>
+          <div class="ptitle">Credit Risk Analysis EDA</div>
+          <div class="pdesc">Statistical EDA on credit risk datasets — identifying default patterns, feature distributions, and key risk indicators using robust analytical methods.</div>
+          <div class="ptechs"><span class="ptech">Python</span><span class="ptech">Pandas</span><span class="ptech">Seaborn</span><span class="ptech">EDA</span></div>
+        </div>
+        <div class="pfoot"><a href="https://github.com/Deepaksaini005/Credit-Risk-Analysis-_EDA" target="_blank" class="plink">Credit-Risk-Analysis-_EDA</a><a href="https://github.com/Deepaksaini005/Credit-Risk-Analysis-_EDA" target="_blank" class="pgh">↗</a></div>
+      </div>
+      <div class="pcard data-type rv d1" data-cat="data"><div class="pcard-spotlight"></div>
+        <div class="pbody">
+          <div class="ptop"><span class="pem">🪔</span><span class="pbadge data">Data Analysis</span></div>
+          <div class="ptitle">Diwali Sales Analysis</div>
+          <div class="pdesc">Comprehensive analysis of Diwali season sales — buyer demographics, regional trends, category performance and consumer purchase behavior patterns.</div>
+          <div class="ptechs"><span class="ptech">Python</span><span class="ptech">Matplotlib</span><span class="ptech">Seaborn</span><span class="ptech">NumPy</span></div>
+        </div>
+        <div class="pfoot"><a href="https://github.com/Deepaksaini005/Diwali-sales-Analysis-" target="_blank" class="plink">Diwali-sales-Analysis-</a><a href="https://github.com/Deepaksaini005/Diwali-sales-Analysis-" target="_blank" class="pgh">↗</a></div>
+      </div>
+      <div class="pcard data-type rv d2" data-cat="data"><div class="pcard-spotlight"></div>
+        <div class="pbody">
+          <div class="ptop"><span class="pem">📊</span><span class="pbadge data">Data Science</span></div>
+          <div class="ptitle">Netflix Data Analysis</div>
+          <div class="pdesc">EDA on Netflix dataset uncovering content trends, genre distributions, rating patterns, and regional production insights via Python visualization stack.</div>
+          <div class="ptechs"><span class="ptech">Pandas</span><span class="ptech">Matplotlib</span><span class="ptech">Seaborn</span></div>
+        </div>
+        <div class="pfoot"><a href="https://github.com/Deepaksaini005/Netflix_data-Analysis-" target="_blank" class="plink">Netflix_data-Analysis-</a><a href="https://github.com/Deepaksaini005/Netflix_data-Analysis-" target="_blank" class="pgh">↗</a></div>
+      </div>
+      <div class="pcard cv-type rv d3" data-cat="cv"><div class="pcard-spotlight"></div>
+        <div class="pbody">
+          <div class="ptop"><span class="pem">👁️</span><span class="pbadge cv">CV · ML</span></div>
+          <div class="ptitle">Face Detection OpenCV</div>
+          <div class="pdesc">Real-time face detection using OpenCV and Haar cascade classifiers — accurately detects multiple faces in static images and live video streams.</div>
+          <div class="ptechs"><span class="ptech">Python</span><span class="ptech">OpenCV</span><span class="ptech">ML</span></div>
+        </div>
+        <div class="pfoot"><a href="https://github.com/Deepaksaini005/face-Detection-open-cv" target="_blank" class="plink">face-Detection-open-cv</a><a href="https://github.com/Deepaksaini005/face-Detection-open-cv" target="_blank" class="pgh">↗</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- EXPERIENCE -->
+<section id="experience" class="sec">
+  <div class="si">
+    <div class="s-kicker rv"><div class="s-kicker-line"></div><span class="s-kicker-txt">My Journey</span></div>
+    <h2 class="s-h2 rv d1">EXPERIENCE & <span class="y">EDUCATION</span></h2>
+    <div class="tlwrap">
+      <div class="tl">
+        <div class="tlitem"><div class="tldot"></div>
+          <div class="tlcard">
+            <div class="tl-head"><div class="tl-icon hack">🏆</div><div class="tl-meta"><div class="tl-year-badge"><span class="dot"></span>2025</div><h3 class="tltitle">Smart India Hackathon — Participant</h3><p class="tlsub">National Level · Team Project</p></div></div>
+            <p class="tldesc">Collaborated with a cross-functional team to build solutions for real-world national challenges. Contributed to ideation, rapid prototyping, and presentation — honing teamwork under intense pressure.</p>
+          </div>
+        </div>
+        <div class="tlitem" style="transition-delay:.15s"><div class="tldot"></div>
+          <div class="tlcard">
+            <div class="tl-head"><div class="tl-icon dev">💻</div><div class="tl-meta"><div class="tl-year-badge"><span class="dot"></span>2025</div><h3 class="tltitle">College Complaint Management System</h3><p class="tlsub">Frontend Developer · Mini Project</p></div></div>
+            <p class="tldesc">Built a fully responsive student complaint portal. Accelerated UI development using Cursor AI. Integrated frontend with REST APIs built by team members — first real production-style project.</p>
+          </div>
+        </div>
+        <div class="tlitem" style="transition-delay:.3s"><div class="tldot"></div>
+          <div class="tlcard">
+            <div class="tl-head"><div class="tl-icon edu">🎓</div><div class="tl-meta"><div class="tl-year-badge"><span class="dot"></span>2024 – Present</div><h3 class="tltitle">B.Tech Computer Science</h3><p class="tlsub">JECRC University, Jaipur</p></div></div>
+            <p class="tldesc">Pursuing 2nd year — studying CS fundamentals alongside ML, Data Science, and Web Development. Complementing academics with active project building and continuous self-driven learning.</p>
+          </div>
+        </div>
+        <div class="tlitem" style="transition-delay:.45s"><div class="tldot"></div>
+          <div class="tlcard">
+            <div class="tl-head"><div class="tl-icon sch">📚</div><div class="tl-meta"><div class="tl-year-badge"><span class="dot"></span>2022 – 2024</div><h3 class="tltitle">Senior Secondary Education</h3><p class="tlsub">Gudha Public School, Gudha Gorji</p></div></div>
+            <p class="tldesc">Completed higher secondary with a strong maths and science foundation — sparking a deep passion for technology and leading to the pursuit of Computer Science engineering.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- CONTACT -->
+<section id="contact" class="sec altbg">
+  <div class="si">
+    <div class="s-kicker rv"><div class="s-kicker-line"></div><span class="s-kicker-txt">Let's Connect</span></div>
+    <h2 class="s-h2 rv d1">GET IN <span class="r">TOUCH</span></h2>
+    <p class="s-desc rv d2">Open to internship opportunities, project collaborations, and new connections.</p>
+    <div class="cgrid">
+      <div class="rvl d1">
+        <div class="chead">LET'S BUILD SOMETHING<br><span class="r">GREAT TOGETHER.</span></div>
+        <p class="csub">Actively looking for internship opportunities and project collaborations. Have an idea or just want to say hi?</p>
+        <div class="c-status-bar"><div class="c-status-dot"></div><span class="c-status-txt">Currently available · Open to opportunities</span></div>
+        <a href="mailto:sainideepaksaini1234567890@gmail.com" class="crow"><div class="cico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="clbl">Email</div><div class="cval">sainideepaksaini1234567890@gmail.com</div></div></a>
+        <a href="tel:+917727049570" class="crow"><div class="cico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.08 1.18 2 2 0 012.08 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><div class="clbl">Phone</div><div class="cval">+91 7727049570</div></div></a>
+        <a href="https://www.linkedin.com/in/deepak-saini-772704d" target="_blank" class="crow"><div class="cico"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4V9h4v1.765C14.396 9.545 15.044 9 16 8zM2 9h4v12H2zm2-3a2 2 0 100-4 2 2 0 000 4z"/></svg></div><div><div class="clbl">LinkedIn</div><div class="cval">linkedin.com/in/deepak-saini-772704d</div></div></a>
+        <a href="https://github.com/Deepaksaini005" target="_blank" class="crow"><div class="cico"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85v2.74c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12c0-5.52-4.48-10-10-10z"/></svg></div><div><div class="clbl">GitHub</div><div class="cval">github.com/Deepaksaini005</div></div></a>
+        <a href="https://www.instagram.com/katariya_deepak19/" target="_blank" class="crow"><div class="cico"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div><div><div class="clbl">Instagram</div><div class="cval">@katariya_deepak19</div></div></a>
+        <div class="crow"><div class="cico">📍</div><div><div class="clbl">Location</div><div class="cval">Gopal Pura, Jaipur, Rajasthan</div></div></div>
+      </div>
+      <div class="rvr d2">
+        <div class="cform">
+          <div class="cftitle">// Send a message</div>
+          <input class="inp" type="text" placeholder="Your Name" id="fn"/>
+          <input class="inp" type="email" placeholder="Your Email" id="fe"/>
+          <input class="inp" type="text" placeholder="Subject" id="fs"/>
+          <textarea class="inp" rows="5" placeholder="Your message..." id="fm"></textarea>
+          <button class="btn-r" style="width:100%;justify-content:center;font-size:.9rem" onclick="sendMsg()">Send Message →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">DS</div>
+      <div class="footer-info">
+        <p>© 2025 <span class="acc">Deepak Saini</span> · B.Tech CS · JECRC University, Jaipur</p>
+        <p style="margin-top:.15rem;opacity:.5">Solar Crimson · Three.js r128 · Plus Jakarta Sans · Bebas Neue</p>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/deepak-saini-772704d" target="_blank" class="footer-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4V9h4v1.765C14.396 9.545 15.044 9 16 8zM2 9h4v12H2zm2-3a2 2 0 100-4 2 2 0 000 4z"/></svg>LinkedIn</a>
+      <a href="https://github.com/Deepaksaini005" target="_blank" class="footer-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85v2.74c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12c0-5.52-4.48-10-10-10z"/></svg>GitHub</a>
+      <a href="https://www.instagram.com/katariya_deepak19/" target="_blank" class="footer-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>Instagram</a>
+      <a href="mailto:sainideepaksaini1234567890@gmail.com" class="footer-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a>
+    </div>
+    <div class="footer-copy">DEEPAK SAINI · ML ENGINEER · GEN AI · WEB DEVELOPER · JAIPUR, RAJASTHAN · 2025</div>
+  </div>
+</footer>
+</div>
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+// ── CURSOR ──────────────────────────
+const cur=document.getElementById('CUR'),cur2=document.getElementById('CUR2');
+let mx=window.innerWidth/2,my=window.innerHeight/2,cx=mx,cy=my;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'});
+(function lag(){cx+=(mx-cx)*.1;cy+=(my-cy)*.1;cur2.style.left=Math.round(cx)+'px';cur2.style.top=Math.round(cy)+'px';requestAnimationFrame(lag)})();
+document.querySelectorAll('a,button,.pcard,.skpanel,.ast,.hs,.atag,.crow').forEach(el=>{
+  el.addEventListener('mouseenter',()=>document.body.classList.add('hovering'));
+  el.addEventListener('mouseleave',()=>document.body.classList.remove('hovering'));
+});
+ 
+// ── TYPEWRITER ───────────────────────
+const phrases=['AI tools & LLMs.','Python & Data Science.','Web apps with JS.','real things that work.'];
+let pi=0,ci=0,del=false;
+const twEl=document.getElementById('tw');
+function typewrite(){
+  const p=phrases[pi];
+  if(!del){twEl.textContent=p.slice(0,++ci);if(ci===p.length){del=true;setTimeout(typewrite,1600);return}}
+  else{twEl.textContent=p.slice(0,--ci);if(ci===0){del=false;pi=(pi+1)%phrases.length}}
+  setTimeout(typewrite,del?45:85);
+}
+setTimeout(typewrite,800);
+ 
+// ── SCROLL PROGRESS ─────────────────
+window.addEventListener('scroll',()=>{
+  const d=document.documentElement;
+  document.getElementById('PROG').style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight)*100)+'%';
+});
+ 
+// ── NAV ACTIVE ──────────────────────
+function go(id){document.getElementById(id)?.scrollIntoView({behavior:'smooth'});document.getElementById('mob').classList.remove('open')}
+['home','about','skills','projects','experience','contact'].forEach(id=>{
+  new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)document.querySelectorAll('.nl').forEach(n=>n.classList.toggle('act',n.dataset.s===id))}),{threshold:.25})
+    .observe(document.getElementById(id));
+});
+ 
+// ── REVEAL ──────────────────────────
+const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.07});
+setTimeout(()=>document.querySelectorAll('.rv,.rvl,.rvr,.tlitem').forEach(el=>ro.observe(el)),100);
+ 
+// ── SKILLS ──────────────────────────
+let skDone=false;
+new IntersectionObserver(([e])=>{if(e.isIntersecting&&!skDone){skDone=true;document.querySelectorAll('.skfill').forEach(el=>{el.style.width=el.dataset.w+'%'})}},{threshold:.1})
+  .observe(document.getElementById('skills'));
+ 
+// ── COUNTERS ────────────────────────
+function count(id,to,sfx){
+  const el=document.getElementById(id);if(!el)return;
+  let v=0;const t=setInterval(()=>{v=Math.min(v+to/55,to);el.textContent=Math.round(v)+sfx;if(v>=to)clearInterval(t)},22);
+}
+new IntersectionObserver(([e])=>{if(e.isIntersecting){count('cn1',9,'+');count('cn2',12,'+')}},{threshold:.5})
+  .observe(document.getElementById('home'));
+const ss=document.querySelector('.statsstrip');
+if(ss)new IntersectionObserver(([e])=>{if(e.isIntersecting){count('ss1',9,'+');count('ss2',12,'+')}},{threshold:.4}).observe(ss);
+ 
+// ── PROJECT SPOTLIGHT ────────────────
+document.querySelectorAll('.pcard').forEach(card=>{
+  card.addEventListener('mousemove',e=>{
+    const r=card.getBoundingClientRect();
+    card.style.setProperty('--sx',((e.clientX-r.left)/r.width*100).toFixed(1)+'%');
+    card.style.setProperty('--sy',((e.clientY-r.top)/r.height*100).toFixed(1)+'%');
+  });
+});
+ 
+// ── PROJECT FILTER ──────────────────
+function filterP(btn){
+  document.querySelectorAll('.pfbtn').forEach(b=>b.classList.remove('sel'));btn.classList.add('sel');
+  const f=btn.dataset.f;
+  document.querySelectorAll('.pcard').forEach(c=>{c.style.display=(f==='all'||c.dataset.cat===f)?'flex':'none'});
+}
+ 
+// ── SEND MSG ────────────────────────
+function sendMsg(){
+  const n=document.getElementById('fn').value,e=document.getElementById('fe').value;
+  const s=document.getElementById('fs').value,m=document.getElementById('fm').value;
+  if(!n||!e){alert('Please fill name & email');return}
+  window.open(`mailto:sainideepaksaini1234567890@gmail.com?subject=${encodeURIComponent(s||'Contact — '+n)}&body=${encodeURIComponent(m+'\n\n— '+n+' ('+e+')')}`)
+}
+ 
+// ════════════════════════════════════
+// THREE.JS
+// ════════════════════════════════════
+(function(){
+  const R1=new THREE.Color('#FF3D6B'),Y1=new THREE.Color('#FFB800'),T1=new THREE.Color('#00E5FF');
+ 
+  // ─ BACKGROUND ─
+  const bgC=document.getElementById('bgCanvas');
+  const bgR=new THREE.WebGLRenderer({canvas:bgC,antialias:true,alpha:true});
+  bgR.setSize(window.innerWidth,window.innerHeight);
+  bgR.setPixelRatio(Math.min(devicePixelRatio,2));
+  bgR.setClearColor(0,0);
+  const bgS=new THREE.Scene(),bgCam=new THREE.PerspectiveCamera(55,window.innerWidth/window.innerHeight,.1,800);
+  bgCam.position.z=50;
+ 
+  // Large slow outer wireframe dodecahedron
+  const dodGeo=new THREE.DodecahedronGeometry(32,0);
+  const dodMat=new THREE.MeshBasicMaterial({color:0xFF3D6B,wireframe:true,transparent:true,opacity:.025});
+  const bgDod=new THREE.Mesh(dodGeo,dodMat);bgS.add(bgDod);
+ 
+  // Floating wireframe cubes — architectural
+  const cubes=[];
+  [
+    {x:-42,y:20,z:-20,s:5,rx:.009,ry:.016},
+    {x:38,y:-20,z:-18,s:7,rx:.006,ry:-.012},
+    {x:22,y:32,z:-28,s:4,rx:.015,ry:.008},
+    {x:-28,y:-30,z:-12,s:6,rx:-.008,ry:.014},
+    {x:50,y:18,z:-22,s:3.5,rx:.012,ry:-.010},
+    {x:-15,y:38,z:-35,s:4.5,rx:.007,ry:.018},
+  ].forEach(d=>{
+    const g=new THREE.BoxGeometry(d.s,d.s,d.s);
+    const m=new THREE.MeshBasicMaterial({color:Math.random()>.6?0xFF3D6B:Math.random()>.5?0xFFB800:0x00E5FF,wireframe:true,transparent:true,opacity:.055});
+    const c=new THREE.Mesh(g,m);c.position.set(d.x,d.y,d.z);c.rotation.set(Math.random()*6,Math.random()*6,0);
+    bgS.add(c);cubes.push({m:c,rx:d.rx,ry:d.ry});
+  });
+ 
+  // Grid
+  const grid=new THREE.GridHelper(180,24,0xFF3D6B,0xFF3D6B);
+  grid.material.transparent=true;grid.material.opacity=.016;grid.position.y=-30;bgS.add(grid);
+ 
+  // Scan line plane — horizontal animated plane
+  const scanGeo=new THREE.PlaneGeometry(200,0.3);
+  const scanMat=new THREE.MeshBasicMaterial({color:0xFF3D6B,transparent:true,opacity:.04,side:THREE.DoubleSide});
+  const scanPlane=new THREE.Mesh(scanGeo,scanMat);scanPlane.rotation.x=Math.PI/2;bgS.add(scanPlane);
+ 
+  let mxBg=0,myBg=0,scrollY=0;
+  document.addEventListener('mousemove',e=>{mxBg=(e.clientX/window.innerWidth-.5)*2;myBg=(e.clientY/window.innerHeight-.5)*2});
+  window.addEventListener('scroll',()=>{scrollY=window.scrollY});
+  window.addEventListener('resize',()=>{bgR.setSize(window.innerWidth,window.innerHeight);bgCam.aspect=window.innerWidth/window.innerHeight;bgCam.updateProjectionMatrix()});
+ 
+  // ─ HERO 3D ─
+  const hC=document.getElementById('heroCanvas');
+  hC.width=360;hC.height=360;
+  const hR=new THREE.WebGLRenderer({canvas:hC,antialias:true,alpha:true});
+  hR.setSize(360,360);hR.setPixelRatio(Math.min(devicePixelRatio,2));hR.setClearColor(0,0);
+  const hS=new THREE.Scene(),hCam=new THREE.PerspectiveCamera(45,1,.1,200);
+  hCam.position.z=5.8;
+ 
+  // MAIN: Rhombicuboctahedron-ish via icosahedron
+  const mainGeo=new THREE.IcosahedronGeometry(1.7,1);
+  const mainMat=new THREE.MeshBasicMaterial({color:0xFF3D6B,wireframe:true,transparent:true,opacity:.6});
+  const mainMesh=new THREE.Mesh(mainGeo,mainMat);hS.add(mainMesh);
+ 
+  // Mid: octahedron
+  const midGeo=new THREE.OctahedronGeometry(1.1,0);
+  const midMat=new THREE.MeshBasicMaterial({color:0xFFB800,wireframe:true,transparent:true,opacity:.45});
+  const midMesh=new THREE.Mesh(midGeo,midMat);hS.add(midMesh);
+ 
+  // Inner: tetrahedron — color cycling
+  const innGeo=new THREE.TetrahedronGeometry(.55,0);
+  const innMat=new THREE.MeshBasicMaterial({color:0x00E5FF,wireframe:true,transparent:true,opacity:.85});
+  const innMesh=new THREE.Mesh(innGeo,innMat);hS.add(innMesh);
+ 
+  // Orbit rings
+  const mkRing=(r,t,col,ry,rx,rz)=>{
+    const g=new THREE.TorusGeometry(r,t,6,120);
+    const m=new THREE.MeshBasicMaterial({color:col,transparent:true,opacity:.55});
+    const mesh=new THREE.Mesh(g,m);
+    mesh.rotation.x=rx;mesh.rotation.y=ry;mesh.rotation.z=rz||0;
+    hS.add(mesh);return mesh;
+  };
+  const ring1=mkRing(2.35,.018,0xFF3D6B,0,Math.PI/3,0);
+  const ring2=mkRing(2.7,.012,0xFFB800,Math.PI/6,-Math.PI/4,Math.PI/5);
+  const ring3=mkRing(3.05,.008,0x00E5FF,Math.PI/3,Math.PI/6,0);
+ 
+  // Orbiting cubes
+  const mkOrb=(size,r,col,pivRx,pivRy)=>{
+    const g=new THREE.BoxGeometry(size,size,size);
+    const m=new THREE.MeshBasicMaterial({color:col,wireframe:true,transparent:true,opacity:.9});
+    const mesh=new THREE.Mesh(g,m);mesh.position.x=r;
+    const piv=new THREE.Group();piv.add(mesh);piv.rotation.x=pivRx;piv.rotation.y=pivRy||0;
+    hS.add(piv);return{piv,mesh};
+  };
+  const orb1=mkOrb(.2,2.35,0xFF3D6B,Math.PI/3,0);
+  const orb2=mkOrb(.15,2.7,0xFFB800,-Math.PI/4,Math.PI/6);
+  const orb3=mkOrb(.12,3.05,0x00E5FF,Math.PI/3,Math.PI/5);
+ 
+  // Sparse hero particles
+  const hPts=[];
+  for(let i=0;i<60;i++){
+    const r=3.4+Math.random()*.9,t=Math.random()*Math.PI*2,p=(Math.random()-.5)*Math.PI;
+    hPts.push(r*Math.cos(t)*Math.cos(p),r*Math.sin(p),r*Math.sin(t)*Math.cos(p));
+  }
+  const hPtGeo=new THREE.BufferGeometry();
+  hPtGeo.setAttribute('position',new THREE.BufferAttribute(new Float32Array(hPts),3));
+  const hPtMat=new THREE.PointsMaterial({size:.04,color:0xFF3D6B,transparent:true,opacity:.6});
+  hS.add(new THREE.Points(hPtGeo,hPtMat));
+ 
+  let hMx=0,hMy=0;
+  hC.addEventListener('mousemove',e=>{const r=hC.getBoundingClientRect();hMx=(e.clientX-r.left)/360-.5;hMy=(e.clientY-r.top)/360-.5});
+  hC.addEventListener('mouseleave',()=>{hMx=0;hMy=0});
+ 
+  // ─ ANIMATE ─
+  const clock=new THREE.Clock();
+  (function tick(){
+    requestAnimationFrame(tick);
+    const t=clock.getElapsedTime();
+ 
+    // BG
+    bgDod.rotation.y=t*.018;bgDod.rotation.x=t*.007;
+    cubes.forEach(c=>{c.m.rotation.x+=c.rx;c.m.rotation.y+=c.ry});
+    scanPlane.position.y=30-((t*8)%62);
+    bgCam.position.x+=(mxBg*3.5-bgCam.position.x)*.03;
+    bgCam.position.y+=(-myBg*2.5-bgCam.position.y)*.03;
+    bgCam.position.z=50+scrollY*.01;
+    bgCam.lookAt(bgS.position);
+    bgR.render(bgS,bgCam);
+ 
+    // Hero
+    mainMesh.rotation.y=t*.32;mainMesh.rotation.x=t*.13;
+    midMesh.rotation.y=-t*.48;midMesh.rotation.x=t*.19;
+    innMesh.rotation.y=t*.85;innMesh.rotation.x=t*.6;
+    ring1.rotation.z=t*.2;
+    ring2.rotation.z=-t*.16;ring2.rotation.y=Math.PI/6+t*.05;
+    ring3.rotation.z=t*.12;ring3.rotation.x=Math.PI/3+Math.sin(t*.25)*.15;
+    orb1.piv.rotation.y=t*.7;orb1.mesh.rotation.x=t*1.2;
+    orb2.piv.rotation.y=-t*.55;orb2.mesh.rotation.y=t*.9;
+    orb3.piv.rotation.y=t*.42;orb3.mesh.rotation.z=t*1.1;
+ 
+    // Color cycle inner core
+    const hue=(t*.05)%1;const lc=new THREE.Color();lc.setHSL(hue,.95,.6);innMat.color=lc;
+ 
+    hCam.position.x+=(hMx*1.4-hCam.position.x)*.06;
+    hCam.position.y+=(-hMy*1.4-hCam.position.y)*.06;
+    hCam.lookAt(hS.position);
+    hR.render(hS,hCam);
+  })();
+})();
+</script>
+</body>
+</html>
